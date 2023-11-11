@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/pieces.js" defer></script>
+    <title>Boutique pièces autos</title>
+</head>
+
+<body>
+    <header class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <img src="images/logo-les-bonnes-pieces.png" alt="" width="200">
+                </div>
+                <div class="col-9 mt-3">
+                    <h1>Les Bonnes Pièces</h1>
+                </div>
+            </div>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-3" id="filtres">
+                <h3 class="mt-5">Filtres</h3>
+                <button type="button" class="btn btn-primary mt-3" id="btn-trier">Trier par prix</button>
+                <button type="button" class="btn btn-primary mt-3" id="btn-filtre">Trier les pièces non
+                    abordables</button>
+                <button type="button" class="btn btn-danger mt-3" id="btn-reset">Annuler les filtres</button>
+
+                <h3 class="mt-5">Donner votre avis</h3>
+                <p class="mt-lg-4" id="message"></p>
+                <form id="form-avis">
+                    <div class="mb-3">
+                        <label class="form-label">Identifiant de la pièce</label>
+                        <input type="number" id="piece-id" min="1" name="place-id" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nom d'utilisateur</label>
+                        <input type="text" id="utilisateur" name="utilisateur" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Commentaire</label>
+                        <input type="text" id="commentaire" name="commentaire" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Note</label>
+                        <input type="number" id="nbEtoiles" name="nbEtoiles" min="0" max="5" class="form-control"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-secondary">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-9 mb-5">
+                <div class="row" id="fiches">
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
